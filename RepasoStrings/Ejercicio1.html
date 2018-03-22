@@ -1,0 +1,23 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+    var mayus = 0;
+    var minus = 0;
+    function contarMayusMinus(){
+      var introducirCadena = prompt('Introduce una cadena: ');
+      for(let i=0;i<introducirCadena.length;i++){
+        if(introducirCadena[i]==(introducirCadena[i].toUpperCase())){
+          mayus++;
+        }else{
+          minus++;
+        }
+      }
+      document.write("La cadena introducida tiene "+mayus+" mayusculas"+"<br>");
+      document.write("La cadena introducida tiene "+minus+" minusculas");
+    }
+    window.onload = contarMayusMinus;
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <button onclick="aleatorio()">0 o 1</button>
+    <button onclick="aleatorioIntervalo()">100-200</button>
+    <button onclick="aleatorioParametros()">Introduce parametros</button>
+    <script>
+      function aleatorio(){
+        document.write(Math.round(Math.random()));
+      }
+      function aleatorioIntervalo(){
+        document.write(Math.round(Math.random()*(200-100)+parseInt(100)));
+      }
+      function aleatorioParametros(){
+        let principio = prompt('Entre: ')
+        let final = prompt('Hasta: ')
+        document.write(Math.round(Math.random()*(final-principio)+parseInt(principio)));
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+    var num = 60;
+    function contador() {
+      if(num>=0){
+        document.write(num);
+        num--;
+        setTimeout(contador,100);
+      }else{
+        location.assign("https://www.google.com");
+      }
+    }
+    window.onload = contador;
+    </script>
+    <p id="contador"></p>
+  </body>
+</html>

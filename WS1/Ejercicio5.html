@@ -1,0 +1,15 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+      function hora(){
+        var horaActual = new Date();
+        document.getElementById('hora').innerHTML=horaActual.getHours()+":"+horaActual.getMinutes()+":"+horaActual.getSeconds();
+        setTimeout(hora,100);
+      }
+      window.onload = hora;
+    </script>
+    <p id="hora"></p>
+  </body>
+</html>

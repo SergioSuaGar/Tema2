@@ -1,0 +1,20 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+    var contador = 0;
+    function contarCaracter(){
+      var introducirCadena = prompt('Introduce una cadena: ');
+      var introducirCaracter = prompt('Introduce un caracter: ');
+      for(let i=0;i<introducirCadena.length;i++){
+        if(introducirCadena[i]==introducirCaracter){
+          contador++;
+        }
+      }
+      document.write("El caracter introducido: '"+introducirCaracter+"' se encuentra "+contador+" veces en la cadena");
+    }
+    window.onload = contarCaracter;
+    </script>
+  </body>
+</html>

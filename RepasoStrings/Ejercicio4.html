@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <script>
+    function contarCaracter(){
+      var introducirCadena = prompt('Introduce una cadena: ');
+      var introducirCaracter = prompt('Introduce un caracter: ');
+      var nuevaCadena='';
+      for(let i=0;i<introducirCadena.length;i++){
+        if(introducirCadena[i]==introducirCaracter){
+          nuevaCadena+=introducirCadena[i].toUpperCase();
+        }else{
+          nuevaCadena+=introducirCadena[i];
+        }
+      }
+      document.write(nuevaCadena);
+    }
+    window.onload = contarCaracter;
+    </script>
+  </body>
+</html>
