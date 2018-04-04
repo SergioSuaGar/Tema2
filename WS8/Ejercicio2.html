@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="stuff, to, help, search, engines, not" name="keywords">
+<meta content="What this page is about." name="description">
+<meta content="Display Webcam Stream" name="title">
+<title>Display Webcam Stream</title>
+
+
+<script>
+function audio(){
+  var audio = document.querySelector("#audioElement");
+  const mediaSource = new MediaSource();
+
+
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+  if (navigator.getUserMedia) {
+    navigator.getUserMedia({audio: true}, handleAudio, audioError);
+  }
+
+  function handleAudio(stream) {
+    audio.srcObject = stream;
+    //video.src = window.URL.createObjectURL(stream); ESTA DEPRECATED
+  }
+
+  function audioError(e) {
+    console.log(e);
+  }
+}
+</script>
+</head>
+
+<body onload="audio()">
+  <div id="container">
+      <audio controls  id="audioElement">
+
+      </audio>
+  </div>
+
+</body>
+</html>
